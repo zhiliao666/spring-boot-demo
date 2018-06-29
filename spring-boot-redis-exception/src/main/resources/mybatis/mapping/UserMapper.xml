@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhiliao.model.UserMapper" >
+   <resultMap id="User" type="com.zhiliao.model.User" >
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    user_id, user_name, email, phone
+  </sql>
+  <select id="getUsers" resultMap="User" parameterType="com.zhiliao.model.User" >
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where user_name = #{userName}
+  </select>
+ 
+</mapper>
