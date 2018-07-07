@@ -3,7 +3,7 @@
 
 ### 前言
 
-最近项目中通过观察后台异常日志经常会发现Could not get a resource from the pool和Read timed out异常，缓存使用的是redis，两个错误异常的的具体原因后边会抽时间专门写一篇文章来说明，今天从另外一个角度来解决这个问题，就是当出现这种异常的时候穿透到数据库返回数据
+最近项目中通过观察后台异常日志经常会发现Could not get a resource from the pool和Read timed out异常，缓存使用的是redis，两个错误异常的的具体原因[点击查看](https://mp.weixin.qq.com/s/ZPE6Jk2s66UysmsVCbxrug)，今天从另外一个角度来解决这个问题，就是当出现这种异常的时候穿透到数据库返回数据
 
 ### 如何使用
 
