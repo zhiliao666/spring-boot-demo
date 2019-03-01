@@ -14,7 +14,7 @@
 
 ### 基本原理
 
-具体代码这边就不作详细介绍，原理大概是首先定义一个自定义注解，然后通过自定义类继承RequestMappingHandlerMapping替换掉请求中的版本相关信息
+具体代码这边就不作详细介绍，原理大概是首先定义一个自定义注解，然后通过自定义类继承springmvc中的RequestMappingHandlerMapping替换掉请求中的版本相关信息
 
 ### 演示
 
@@ -27,4 +27,6 @@
 - http://localhost:8081/v2/other?msg=other
 
 运行之后可以发现v2/hello正确的映射到了v2版本，v2/other没有对应的版本会自动向下兼容使用到v1/other
+
+具体代码可以[点击查看](https://github.com/zhiliao666/spring-boot-demo/blob/master/spring-boot-apiversion/src/main/java/com/zhiliao/api/ControllerTest.java)
 
